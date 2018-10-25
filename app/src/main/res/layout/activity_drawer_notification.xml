@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.rohan7055.earnchat.DrawerNotification">
+    <include
+        android:id="@+id/topBar"
+        layout="@layout/custome_actionbar8"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentTop="true" />
+    <ScrollView
+        android:layout_below="@id/topBar"
+        android:background="#fff"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:paddingTop="@dimen/activity_vertical_margin"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:id="@+id/receiptLayout"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Read Receipts"
+                    android:textColor="@android:color/black"
+                    android:fontFamily="sans-serif-light"
+                    android:padding="5dp"
+                    android:textSize="16sp"
+                    android:gravity="bottom"
+                    android:id="@+id/txt"
+                    />
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleX="1.5"
+                    android:scaleY="1.5"
+                    android:checked="true"
+                    android:layout_alignEnd="@+id/txt"
+                    android:layout_alignRight="@+id/txt"
+                    android:id="@+id/notification_read_receipt"
+                    />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/hintColor"
+                    android:layout_marginTop="30dp"
+                    android:layout_below="@id/notification_read_receipt"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:id="@+id/vibrationLayout"
+                android:layout_below="@id/receiptLayout"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Vibrate"
+                    android:textColor="@android:color/black"
+                    android:padding="5dp"
+                    android:textSize="16sp"
+                    android:fontFamily="sans-serif-light"
+                    android:gravity="bottom"
+                    android:id="@+id/vibrationtxt"
+                    />
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleX="1.5"
+                    android:scaleY="1.5"
+                    android:checked="true"
+                    android:layout_alignEnd="@+id/vibrationtxt"
+                    android:layout_alignRight="@+id/vibrationtxt"
+                    android:id="@+id/notification_vibration"
+                    />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/hintColor"
+                    android:layout_marginTop="30dp"
+                    android:layout_below="@id/notification_vibration"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dp"
+                android:layout_below="@id/vibrationLayout"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Message Notification"
+                    android:textStyle="bold"
+                    android:textColor="@color/ThemeColor"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16sp"
+                    android:fontFamily="sans-serif-light"
+                    android:gravity="bottom"
+                    android:id="@+id/message_title"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/message_notificationTone"
+                    android:text="Notification Tone"
+                    android:fontFamily="sans-serif-light"
+                    android:textColor="@android:color/black"
+                    android:layout_below="@+id/message_title"
+                    android:layout_marginTop="20dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/message_toneName"
+                    android:text="Default Ringtone (Notification)"
+                    android:textColor="@color/hintColor"
+                    android:fontFamily="sans-serif-light"
+                    android:layout_below="@+id/message_notificationTone"
+                    android:layout_marginTop="5dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/message_notificationLight"
+                    android:text="Notification Light"
+                    android:textColor="@android:color/black"
+                    android:fontFamily="sans-serif-light"
+                    android:layout_below="@+id/message_toneName"
+                    android:layout_marginTop="20dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/message_LightName"
+                    android:text="White"
+                    android:fontFamily="sans-serif-light"
+                    android:textColor="@color/hintColor"
+                    android:layout_below="@+id/message_notificationLight"
+                    android:layout_marginTop="5dp"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/hintColor"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@id/message_LightName"/>
+
+            </RelativeLayout>
+<!--
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dp"
+                android:id="@+id/groupLayout"
+                android:layout_below="@id/messageLayout"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Group Notification"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif-light"
+                    android:textColor="@color/ThemeColor"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16sp"
+                    android:gravity="bottom"
+                    android:id="@+id/group_title"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/group_notificationTone"
+                    android:text="Notification Tone"
+                    android:fontFamily="sans-serif-light"
+                    android:textColor="@android:color/black"
+                    android:layout_below="@+id/group_title"
+                    android:layout_marginTop="20dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/group_toneName"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Default Ringtone (Notification)"
+                    android:textColor="@color/hintColor"
+                    android:layout_below="@+id/group_notificationTone"
+                    android:layout_marginTop="5dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/group_notificationLight"
+                    android:text="Notification Light"
+                    android:fontFamily="sans-serif-light"
+                    android:textColor="@android:color/black"
+                    android:layout_below="@+id/group_toneName"
+                    android:layout_marginTop="20dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/group_LightName"
+                    android:text="White"
+                    android:fontFamily="sans-serif-light"
+                    android:textColor="@color/hintColor"
+                    android:layout_below="@+id/group_notificationLight"
+                    android:layout_marginTop="5dp"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/hintColor"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@id/group_LightName"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dp"
+                android:id="@+id/magicChatLayout"
+                android:layout_below="@id/groupLayout"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Magic Chat"
+                    android:textStyle="bold"
+                    android:textColor="@color/ThemeColor"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16sp"
+                    android:fontFamily="sans-serif-light"
+                    android:gravity="bottom"
+                    android:id="@+id/magicChat_title"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/magicChat_notificationTone"
+                    android:text="Notification Tone"
+                    android:textColor="@android:color/black"
+                    android:fontFamily="sans-serif-light"
+
+                    android:layout_below="@+id/magicChat_title"
+                    android:layout_marginTop="20dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/magicChat_toneName"
+                    android:text="Default Ringtone (Notification)"
+                    android:fontFamily="sans-serif-light"
+
+                    android:textColor="@color/hintColor"
+                    android:layout_below="@+id/magicChat_notificationTone"
+                    android:layout_marginTop="5dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/magicChat_notificationLight"
+                    android:text="Notification Light"
+                    android:fontFamily="sans-serif-light"
+
+                    android:textColor="@android:color/black"
+                    android:layout_below="@+id/magicChat_toneName"
+                    android:layout_marginTop="20dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/magicChat_LightName"
+                    android:text="White"
+                    android:fontFamily="sans-serif-light"
+
+                    android:textColor="@color/hintColor"
+                    android:layout_below="@+id/magicChat_notificationLight"
+                    android:layout_marginTop="5dp"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/hintColor"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@id/magicChat_LightName"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dp"
+                android:id="@+id/cinsioLayout"
+                android:layout_below="@id/magicChatLayout"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Cinsio"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif-light"
+
+                    android:textColor="@color/ThemeColor"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16sp"
+                    android:gravity="bottom"
+                    android:id="@+id/cinsio_title"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cinsio_notificationTone"
+                    android:text="Notification Tone"
+                    android:fontFamily="sans-serif-light"
+
+                    android:textColor="@android:color/black"
+                    android:layout_below="@+id/cinsio_title"
+                    android:layout_marginTop="20dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cinsio_toneName"
+                    android:text="Default Ringtone (Notification)"
+                    android:textColor="@color/hintColor"
+                    android:fontFamily="sans-serif-light"
+
+                    android:layout_below="@+id/cinsio_notificationTone"
+                    android:layout_marginTop="5dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cinsio_notificationLight"
+                    android:text="Notification Light"
+                    android:fontFamily="sans-serif-light"
+
+                    android:textColor="@android:color/black"
+                    android:layout_below="@+id/cinsio_toneName"
+                    android:layout_marginTop="20dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cinsio_LightName"
+                    android:text="White"
+                    android:fontFamily="sans-serif-light"
+
+                    android:textColor="@color/hintColor"
+                    android:layout_below="@+id/cinsio_notificationLight"
+                    android:layout_marginTop="5dp"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/hintColor"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@id/cinsio_LightName"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dp"
+                android:layout_below="@id/cinsioLayout"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Message Notification"
+                    android:textStyle="bold"
+                    android:textColor="@color/ThemeColor"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16sp"
+                    android:fontFamily="sans-serif-light"
+
+                    android:gravity="bottom"
+                    android:id="@+id/pushNotification_title"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/pushNotification_notificationTone"
+                    android:text="Notification Tone"
+                    android:fontFamily="sans-serif-light"
+
+                    android:textColor="@android:color/black"
+                    android:layout_below="@+id/pushNotification_title"
+                    android:layout_marginTop="20dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/pushNotification_toneName"
+                    android:text="Default Ringtone (Notification)"
+                    android:fontFamily="sans-serif-light"
+
+                    android:textColor="@color/hintColor"
+                    android:layout_below="@+id/pushNotification_notificationTone"
+                    android:layout_marginTop="5dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
+
+                    android:id="@+id/pushNotification_notificationLight"
+                    android:text="Notification Light"
+                    android:textColor="@android:color/black"
+                    android:layout_below="@+id/pushNotification_toneName"
+                    android:layout_marginTop="20dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:fontFamily="sans-serif-light"
+
+                    android:layout_height="wrap_content"
+                    android:id="@+id/pushNotification_LightName"
+                    android:text="White"
+                    android:textColor="@color/hintColor"
+                    android:layout_below="@+id/pushNotification_notificationLight"
+                    android:layout_marginTop="5dp"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/hintColor"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@id/pushNotification_LightName"/>
+
+            </RelativeLayout>-->
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

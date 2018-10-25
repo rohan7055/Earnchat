@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <TextView
+        android:id="@+id/day"
+        android:background="@drawable/round_background3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:gravity="center"
+        android:layout_marginTop="6dp"
+        android:textColor="@color/notification_text"
+        android:layout_centerHorizontal="true"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:fontFamily="sans-serif-smallcaps"
+        />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/main_layout"
+        android:layout_below="@+id/day"
+        android:paddingBottom="@dimen/layout_tb_padding"
+        android:paddingTop="@dimen/layout_tb_padding"
+        android:paddingRight="@dimen/layout_lr_padding"
+        android:paddingLeft="@dimen/layout_restriction_padding"
+        android:gravity="end">
+
+
+
+        <RelativeLayout
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/media_corner"
+            android:id="@+id/rl_one"
+           >
+
+
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="150dp"
+                android:id="@+id/sticker"
+                android:background="@drawable/media_pic_corner"
+
+                android:layout_marginTop="3dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginBottom="3dp"
+                android:layout_marginRight="3dp"
+
+                android:src="@drawable/temp"
+                android:scaleType="centerCrop"
+                />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                >
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|center_horizontal">
+
+
+                    <com.dd.CircularProgressButton
+                        android:id="@+id/btnWithText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        app:cpb_cornerRadius="48dp"
+                        android:visibility="gone"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        app:cpb_textIdle="@string/retry"
+                        app:cpb_colorProgress="@color/textColorBlack"
+                        android:alpha="0.5"
+                        app:cpb_selectorIdle="@drawable/idle_state_selector"
+                        />
+
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_close"
+                    android:visibility="gone"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:id="@+id/cancel" />
+
+
+            </FrameLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignBottom="@+id/sticker"
+
+
+                android:layout_gravity="bottom"
+                android:paddingRight="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="11:30pm"
+                    android:id="@+id/timestamp"
+                    android:textSize="@dimen/timestamp_size"
+                    android:layout_marginBottom="4dp"
+                    android:background="@color/background_theme_color"
+                    android:textColor="@color/textColorBlack"
+                    android:alpha="0.5"
+                    />
+
+                <ImageView
+                    android:layout_width="@dimen/msg_status_icon"
+                    android:layout_height="@dimen/msg_status_icon"
+                    android:src="@drawable/ic_pending"
+
+                    android:id="@+id/msg_status"
+                    android:paddingBottom="2dp"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:layout_gravity="center"
+                    />
+
+            </LinearLayout>
+
+
+
+
+
+            <!--<com.vanniktech.emoji.EmojiTextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:textAppearance="?android:attr/textAppearanceMedium"-->
+                <!--android:fontFamily="sans-serif-condensed"-->
+                <!--android:id="@+id/message"-->
+                <!--android:layout_below="@+id/sticker"-->
+<!---->
+                <!--android:textColor="@color/textColorBlack"-->
+                <!--android:textSize="@dimen/message_text_size"-->
+                <!--app:emojiSize="20sp"-->
+                <!--android:layout_marginLeft="5dp"-->
+                <!--android:layout_marginTop="2dp"-->
+                <!--android:layout_marginBottom="2dp"-->
+                <!--android:layout_marginRight="15dp"-->
+                <!--/>-->
+
+    </RelativeLayout>
+        <com.vanniktech.emoji.EmojiTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:fontFamily="sans-serif-condensed"
+        android:id="@+id/message"
+        android:layout_below="@+id/rl_one"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="3dp"
+            android:layout_alignEnd="@+id/rl_one"
+            android:layout_alignRight="@+id/rl_one"
+            android:layout_alignStart="@+id/rl_one"
+            android:layout_alignLeft="@+id/rl_one"
+        android:background="@drawable/text_round"
+        android:textColor="@color/cpb_white"
+            android:visibility="visible"
+        android:textSize="@dimen/message_text_size"
+        app:emojiSize="20sp"
+            android:text=""
+        android:layout_marginBottom="2dp"
+        />
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:background="@color/celegram_me"-->
+            <!--android:layout_below="@+id/rl_one"-->
+            <!--android:text="ndjkvnjksjdsncjkddncdkjsdkjnflksddkjnckjdkjjknkjnfdj"-->
+            <!--android:layout_alignEnd="@+id/rl_one"-->
+            <!--android:layout_alignRight="@+id/rl_one"/>-->
+
+
+
+
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

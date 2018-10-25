@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/active_chat_layout"
+    android:background="#fff"
+    android:weightSum="10">
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/rl_checkbox"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_marginLeft="5dp">
+        <cn.refactor.library.SmoothCheckBox
+            android:id="@+id/scb"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            app:color_checked="@color/colorPrimary"
+            app:color_tick="@color/cpb_white"
+            app:color_unchecked_stroke="#d2c8c8"
+            android:layout_centerInParent="true"
+
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_weight="9"
+        android:layout_width="0dp"
+        android:layout_height="85dp"
+        android:layout_marginRight="0dp"
+        android:paddingTop="0dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_centerVertical="true"
+            android:id="@+id/contact_image"
+            android:src="@drawable/temp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginEnd="5dp"
+           />
+        <ImageView
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_centerVertical="true"
+            android:id="@+id/contact_image_magic"
+            android:src="@drawable/temp"
+            android:background="@drawable/pic_border"
+
+            android:layout_marginLeft="10dp"
+            android:visibility="gone"
+            android:layout_marginRight="5dp"
+            />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/my_chat_view"
+            android:layout_toRightOf="@+id/contact_image"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+
+                android:paddingLeft="8dp"
+                android:paddingTop="2dp"
+
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="17sp"
+                    android:text="Contact_name"
+                    android:gravity="center"
+                    android:textColor="#2f2e34"
+                    android:fontFamily="sans-serif-medium"
+
+                    android:id="@+id/contact_name"
+
+                    android:layout_marginTop="16dp"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="3dp"
+                    android:paddingBottom="2dp"
+                    android:textSize="15sp"
+                    android:text="Medium Text"
+
+
+                    android:fontFamily="sans-serif"
+                    android:id="@+id/my_chat_message"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:textColor="#b4b4b6" />
+
+            </LinearLayout>
+
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/mute"
+                android:layout_toLeftOf="@+id/message_count"
+                android:layout_marginRight="1dp"
+                android:id="@+id/iv_mute"
+
+                android:visibility="invisible"
+               android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="10dp"
+
+                />
+
+            <TextView
+                android:id="@+id/message_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="bottom"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/circular_textview"
+                android:gravity="center"
+                android:text="321"
+                android:textColor="@android:color/white"
+                android:textSize="8sp"
+                />
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/icon_mc"
+                android:layout_below="@+id/my_chat_time"
+                android:layout_centerHorizontal="true"
+                android:visibility="gone"
+                android:id="@+id/magic_icon"/>
+
+
+
+            <ProgressBar
+                style="?android:attr/progressBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/progressBar"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:backgroundTint="@android:color/holo_blue_dark"
+                android:visibility="gone"
+                android:layout_alignParentRight="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="11sp"
+                android:textColor="#000"
+                android:text="1 PM"
+                android:id="@+id/my_chat_time"
+                android:singleLine="true"
+                android:fontFamily="sans-serif-medium"
+                android:ellipsize="end"
+                android:layout_below="@+id/progressBar"
+                android:layout_alignLeft="@+id/message_count"
+                android:layout_alignStart="@+id/message_count"
+                android:layout_above="@+id/message_count"
+                android:layout_alignParentEnd="true"
+                android:layout_marginBottom="5dp"
+                android:layout_alignParentRight="true" />
+
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <View
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="85dp"
+        android:layout_marginRight="10dp"
+        android:background="#e9e9e9">
+
+    </View>
+</LinearLayout>

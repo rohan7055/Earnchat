@@ -1,0 +1,100 @@
+<RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+android:layout_height="match_parent"
+xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+<TextView
+    android:id="@+id/text3"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="/3"
+    android:textColor="#546A5E"
+    android:textSize="30dp"
+    android:layout_marginTop="20dp"
+    android:layout_marginRight="20dp"
+    android:layout_alignParentRight="true"
+    />
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="1"
+    android:textColor="#6FC69C"
+    android:textSize="30dp"
+    android:layout_toLeftOf="@+id/text3"
+    android:layout_marginTop="20dp"
+    />
+
+
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:orientation="vertical"
+    android:paddingBottom="25dp"
+    >
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="170dp"
+        android:layout_height="170dp"
+        app:srcCompat="@drawable/logo"
+        android:layout_marginTop="15dp"
+        android:layout_gravity="center"
+        />
+
+    <!--<TextView
+        android:id="@+id/text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="8CHAT"
+        android:textSize="40dp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        />-->
+
+    <TextView
+        android:id="@+id/text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/frag1_text"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:layout_margin="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        />
+
+</LinearLayout>
+
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="25dp"
+    android:layout_alignParentBottom="true"
+    android:layout_centerHorizontal="true">
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_corners_signup"
+        android:text="NEXT"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        android:onClick="next1"
+        />
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:textColor="#546A5E"
+        android:text="Skip"
+        android:textAllCaps="false"
+        android:onClick="skip"
+        />
+</LinearLayout>
+
+</RelativeLayout>

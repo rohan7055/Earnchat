@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:clickable="true"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        style="@style/Toolbar"
+        app:contentInsetStart="0dp"
+        android:id="@+id/toolbar_celegram"
+        android:title="@string/celgram" >
+
+        <ImageView
+            android:id="@+id/guillotine_hamburger"
+            app:srcCompat="@drawable/menu_icon"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_height="30dp"
+            android:layout_width="30dp" />
+        <TextView
+            android:id="@+id/title_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="8CHAT"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_weight="1">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_image"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/temp"
+            android:layout_marginTop="15dp"
+            android:clickable="false"
+            android:layout_marginRight="15dp"/>
+
+        <LinearLayout
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:layout_gravity ="center_vertical"
+            android:textColor="#000"
+            android:id="@+id/profileName"
+            android:text="Profile Name"
+            android:fontFamily="sans-serif"
+            android:layout_below="@id/profile_image"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:layout_gravity ="center_vertical"
+            android:id="@+id/profileUserName"
+            android:text="UserName"
+            android:textColor="#6d6e7f"
+            android:fontFamily="sans-serif-light"
+            android:layout_below="@id/profileName"
+            android:layout_marginTop="2dp"
+            android:layout_centerHorizontal="true" />
+        </LinearLayout>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height=".5dp"
+        android:background="@color/gray_light"
+        android:layout_below="@id/notification_read_receipt"/>
+    <LinearLayout
+        android:id="@+id/notification_group"
+        style="@style/LinearLayout.GuillotineItem">
+            <ImageView
+                style="@style/ImageView.GuillotineItem"
+                app:srcCompat="@drawable/ic_notifications" />
+
+            <TextView
+                android:fontFamily="sans-serif"
+                style="@style/TextView.GuillotineItem"
+                android:text="Notification" />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height=".5dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginLeft="87dp"
+        android:background="@color/gray_light"
+        android:layout_below="@id/notification_read_receipt"/>
+    <LinearLayout
+
+        android:id="@+id/logout_group"
+        style="@style/LinearLayout.GuillotineItem"
+        android:layout_marginBottom="10dp">
+
+
+            <ImageView
+                style="@style/ImageView.GuillotineItem"
+                android:background="@drawable/transparent"
+                app:srcCompat="@drawable/ic_logout" />
+
+            <TextView
+                android:fontFamily="sans-serif"
+                style="@style/TextView.GuillotineItem"
+                android:text="Logout" />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height=".5dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginLeft="87dp"
+        android:background="@color/gray_light"
+        android:layout_below="@id/notification_read_receipt"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="7">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>
+

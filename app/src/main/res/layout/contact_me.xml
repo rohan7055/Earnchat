@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/day"
+        android:background="@drawable/round_background3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:gravity="center"
+        android:textColor="@color/notification_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="6dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:fontFamily="sans-serif-smallcaps"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/layout_tb_padding"
+        android:paddingBottom="@dimen/layout_tb_padding"
+        android:paddingLeft="@dimen/layout_restriction_padding"
+        android:paddingRight="@dimen/layout_lr_padding"
+        android:gravity="end"
+        android:id="@+id/main_layout"
+        android:layout_below="@+id/day">
+
+        <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            card_view:cardCornerRadius="2dp"
+            card_view:cardBackgroundColor="@android:color/transparent"
+            android:descendantFocusability="blocksDescendants"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:layout_toRightOf="@+id/sender_image">
+
+            <RelativeLayout
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_background8"
+                android:id="@+id/contactbox"
+                android:layout_below="@+id/day"
+                >
+
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/contact_img"
+                    android:layout_below="@+id/sender_name"
+                    app:srcCompat="@drawable/phonebook"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="contact name"
+                    android:id="@+id/contact_name"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="19sp"
+                    android:layout_toRightOf="@+id/contact_img"
+                    android:layout_alignTop="@+id/contact_img"
+                    android:gravity="center"
+                    android:textColor="@color/cpb_white"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:layout_marginRight="10dp"
+
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+9591358441"
+                    android:id="@+id/contact_number"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="14sp"
+                    android:layout_toRightOf="@+id/contact_img"
+                    android:layout_below="@+id/contact_name"
+                    android:gravity="center"
+                    android:textColor="@color/cpb_white"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:layout_marginRight="10dp"
+
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="11:30pm"
+                    android:id="@+id/timestamp"
+                    android:textSize="10sp"
+                    android:layout_below="@+id/contact_number"
+                    android:padding="@dimen/text_padding"
+                    android:layout_toLeftOf="@+id/msg_status"
+                    android:textColor="@color/cpb_white"/>
+
+                <ImageView
+                    android:layout_width="@dimen/msg_status_icon"
+                    android:layout_height="@dimen/msg_status_icon"
+                    android:src="@drawable/ic_pending"
+                    android:id="@+id/msg_status"
+                    android:paddingTop="2dp"
+                    android:layout_below="@+id/contact_number"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignRight="@+id/message"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginRight="9dp"
+                    />
+
+
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+    </RelativeLayout>
+
+</RelativeLayout>

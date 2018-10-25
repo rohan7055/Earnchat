@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.rohan7055.earnchat.celgram.MGCChat">
+
+    <include layout="@layout/custome_actionbar_chat"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/include" />
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/create_chat_view_magic2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/include"
+        android:scrollbars="vertical" />
+</RelativeLayout>

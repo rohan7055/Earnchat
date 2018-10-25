@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--e88b04-->
+
+
+    <color name="colorPrimary">#725573</color>
+    <color name="colorPrimaryCinsio">#ff7700</color>
+    <color name="colorPrimaryDark">#725573</color>
+    <color name="colorAccent">#725573</color>
+    <color name="colorSecondary">#546A5E</color>
+    <color name="ThemeColor">#725573</color>
+    <color name="themeSecondary">#725573</color>
+    <color name="textColor">#ffffff</color>
+    <color name="white_overlay">#F3F3F3</color>
+    <color name="gray_light">#d9d9d9</color>
+    <color name="hintColor">#a5a5a5</color>
+    <color name="FiledTextColor">#000000</color>
+    <color name="LabelColor">#000000</color>
+    <color name="seperator_color">#B36B24</color>
+    <color name="background_theme_color">#ffffff</color>
+    <color name="textColorPrimary">#212121</color>
+    <color name="textColorSecondary">#727272</color>
+    <color name="divider_color">#b6b6b6</color>
+    <color name="accentColor">#fc6c26</color>
+    <color name="black_overlay">#66000000</color>
+    <color name="textColorBlack">#000000</color>
+
+    <color name="white">#ffffff</color>
+
+    <color name="selectedContact">#6FC69C</color>
+
+    <color name="yellow_fab">#Ff9800</color>
+
+
+    <color name="back">#F7FAF9</color>
+
+    <color name="blue_grey_600">#546E7A</color>
+
+    <color name="notification_bground">#546E7A</color>
+    <color name="notification_text">#ffffff</color>
+
+    <color name="selected_item_color">#30d1d5</color>
+    <color name="text_color_grey">#6d6e7f</color>
+
+
+    <!--Search Colors-->
+
+</resources>

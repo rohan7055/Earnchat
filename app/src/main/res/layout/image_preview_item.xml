@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.davemorrissey.labs.subscaleview.SubsamplingScaleImageView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:id="@+id/image"
+        />
+
+
+    <com.vanniktech.emoji.EmojiEditText
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:hint="Enter Caption..."
+        android:textColorHint="@color/white"
+        android:layout_height="50dp"
+        android:textColor="@color/white"
+        android:background="@color/blue_grey_600"
+        android:paddingLeft="10dp"
+        android:id="@+id/caption"
+        app:emojiSize="20sp"
+        android:textSize="16sp"
+        android:gravity="center_vertical"
+        />
+</LinearLayout>

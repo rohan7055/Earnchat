@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/day"
+        android:background="@drawable/round_background3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:gravity="center"
+        android:layout_marginTop="6dp"
+        android:textColor="@color/notification_text"
+        android:layout_centerHorizontal="true"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:fontFamily="sans-serif-smallcaps"
+        />
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingRight="@dimen/layout_lr_padding"
+    android:paddingBottom="@dimen/layout_tb_padding"
+    android:paddingTop="@dimen/layout_tb_padding"
+    android:paddingLeft="@dimen/layout_restriction_padding"
+    android:layout_below="@+id/day"
+    android:id="@+id/main_layout"
+    android:gravity="end">
+
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        card_view:cardCornerRadius="2dp"
+        card_view:cardBackgroundColor="#fff"
+        android:descendantFocusability="blocksDescendants"
+        android:foreground="?android:attr/selectableItemBackground"
+        >
+
+        <RelativeLayout
+            android:id="@+id/layout11"
+            android:layout_width="270dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_background8"
+            android:paddingBottom="2dp"
+            >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/doc_layout"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:id="@+id/doc_img"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/doc_as_att"
+                     />
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|center_horizontal">
+
+                        <com.dd.CircularProgressButton
+                            android:id="@+id/btnWithText"
+                            android:layout_width="38dp"
+                            android:layout_height="38dp"
+                            app:cpb_cornerRadius="38dp"
+                            android:visibility="gone"
+                            android:textColor="@color/white"
+                            app:cpb_textIdle="@string/upload"
+                            android:textSize="18sp"
+                            app:cpb_colorProgress="@color/textColorBlack"
+                            android:alpha="0.5"
+                            app:cpb_selectorIdle="@drawable/idle_state_selector"
+                            />
+
+                    </RelativeLayout>
+
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/ic_close"
+                        android:visibility="gone"
+                        android:layout_gravity="center_vertical|center_horizontal"
+                        android:id="@+id/cancel" />
+
+                </FrameLayout>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Doc Name"
+                android:id="@+id/doc_name"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"
+                android:textSize="20sp"
+                android:textColor="@color/cpb_white"
+                android:fontFamily="sans-serif-condensed"
+                android:layout_alignTop="@+id/doc_layout"
+                android:layout_toRightOf="@+id/doc_layout"
+                android:maxLines="2"
+                android:ellipsize="end"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="11:30pm"
+                android:id="@+id/timestamp"
+                android:textSize="12sp"
+                android:layout_toLeftOf="@+id/msg_status"
+                android:layout_below="@+id/doc_layout"
+                android:layout_marginRight="2dp"
+                android:paddingBottom="@dimen/text_padding"
+                android:textColor="@color/cpb_white"
+                />
+
+            <ImageView
+                android:layout_width="@dimen/msg_status_icon"
+                android:layout_height="@dimen/msg_status_icon"
+                android:src="@drawable/ic_pending"
+                android:id="@+id/msg_status"
+                android:paddingTop="2dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/doc_layout"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="@dimen/text_padding"
+                />
+
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>
+
+
+</RelativeLayout>

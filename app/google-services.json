@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "794230835200",
+    "firebase_url": "https://chikoop-358ff.firebaseio.com",
+    "project_id": "chikoop-358ff",
+    "storage_bucket": "chikoop-358ff.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:794230835200:android:e2841a1d135a6725",
+        "android_client_info": {
+          "package_name": "com.release.chikoopapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "794230835200-q7am32uerqff0be8p8dvuqujoioiiaun.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAxVEWdHNc_vEARznxrH5VDrgPJ7PxreWc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

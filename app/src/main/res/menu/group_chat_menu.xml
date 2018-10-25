@@ -1,0 +1,44 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+
+    <item
+        android:id="@+id/group_edit"
+        android:title="Edit Group"/>
+
+    <item
+        android:id="@+id/group_mute"
+        android:title="Mute"/>
+
+    <item
+        android:id="@+id/group_theme"
+        android:title="Theme"/>
+
+    <item
+        android:id="@+id/group_wallpaper"
+        android:title="Wallpaper"/>
+
+
+    <item
+        android:id="@+id/group_clear"
+        android:title="Clear Chat"/>
+    <item
+        android:id="@+id/group_shortcut"
+        android:title="Add shortcut"/>
+
+    <item
+        android:id="@+id/group_email"
+        android:title="Email Chat"/>
+
+
+    <item
+        android:id="@+id/group_delete"
+        android:title="Delete Group"/>
+    <item
+        android:id="@+id/action_attachment"
+        android:icon="@drawable/ic_attachment_white_24dp"
+        android:title="Media"
+        app:showAsAction="ifRoom" />
+
+</menu>

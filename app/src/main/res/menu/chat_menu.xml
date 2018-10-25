@@ -1,0 +1,38 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+
+    <item
+        android:id="@+id/mute"
+        android:title="Mute"/>
+
+    <item
+        android:id="@+id/block"
+        android:title="Block"/>
+    <item
+        android:id="@+id/theme"
+        android:title="Theme"/>
+
+    <!--<item
+        android:id="@+id/wallpaper"
+        android:title="Wallpaper"/>-->
+
+    <item
+        android:id="@+id/clear_chat"
+        android:title="Clear Chat"/>
+
+    <item
+        android:id="@+id/email_chat"
+        android:title="Email Chat"/>
+    <item
+        android:id="@+id/add_shortcut"
+        android:title="Add shortcut"/>
+
+    <item
+        android:visible="false"
+        android:id="@+id/action_attachment"
+        android:icon="@drawable/ic_attachment_white_24dp"
+        android:title="Media Attachments"
+        app:showAsAction="ifRoom" />
+</menu>

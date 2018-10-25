@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <TextView
+        android:id="@+id/day"
+        android:background="@drawable/round_background3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:gravity="center"
+        android:layout_marginTop="6dp"
+        android:textColor="@color/notification_text"
+        android:layout_centerHorizontal="true"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:fontFamily="sans-serif-smallcaps"
+        />
+
+    <RelativeLayout
+        android:id="@+id/high"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/day"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:paddingRight="@dimen/layout_restriction_padding"
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="3dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp"
+            android:background="@drawable/round_background7" >
+
+            <LinearLayout
+                android:id="@+id/replyLay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="2dp"
+                android:background="@drawable/round_background_transparent"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:orientation="horizontal"
+                    android:weightSum="1"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_gravity="center_vertical"
+                        >
+
+                        <TextView
+                            android:id="@+id/reply_sender"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="sender"
+                            android:layout_marginLeft="3dp"
+                            android:layout_marginStart="3dp"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            />
+
+                        <TextView
+                            android:id="@+id/replyToText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="3dp"
+                            android:layout_marginStart="3dp"
+                            android:layout_marginBottom="2dp"
+                            android:textSize="14sp"
+                            android:maxLength="50"
+                            android:ellipsize="end"
+                            android:maxLines="2"
+                            android:text="some random bullshit here jjdfdfidh idfidhf difhdi"
+                            />
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/reply_image"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:layout_margin="3dp"
+                        app:srcCompat="@drawable/icon"
+                        android:layout_weight="1"
+                        android:visibility="visible"
+                        android:layout_gravity="center_vertical"
+                        />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:minWidth="200dp"
+            >
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                >
+
+                <com.vanniktech.emoji.EmojiTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/message"
+                    android:background="@android:color/transparent"
+                    android:textSize="@dimen/message_text_size"
+                    app:emojiSize="24sp"
+                    android:textColor="@color/textColorBlack"
+                    android:text="hi"
+                    android:fontFamily="sans-serif"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_below="@+id/sender_name"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginTop="2dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SENDER"
+                    android:textColor="@color/ThemeColor"
+                    android:id="@+id/sender_name"
+                    android:textSize="@dimen/sender_text_size"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="10dp"
+                    android:textStyle="bold"
+                    android:padding="@dimen/text_padding"
+                    android:fontFamily="sans-serif-condensed"
+                    android:visibility="gone"
+                    />
+
+                <com.vanniktech.emoji.EmojiTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/celgram_name"
+                    android:background="@android:color/transparent"
+                    android:textSize="@dimen/celgram_name_size"
+                    app:emojiSize="14sp"
+                    android:text="~celgram name"
+                    android:fontFamily="sans-serif"
+                    android:layout_toRightOf="@+id/sender_name"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_alignParentTop="true"
+                    android:visibility="gone"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="2dp"
+                android:layout_marginEnd="2dp"
+                android:layout_gravity="bottom"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="11:30 pm"
+                    android:fontFamily="sans-serif-condensed"
+                    android:id="@+id/timestamp"
+                    android:textSize="@dimen/timestamp_size"
+                    android:layout_marginRight="3dp"
+                    android:layout_marginEnd="3dp"
+                    android:layout_marginBottom="2dp"
+                    />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        </LinearLayout>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="@dimen/sender_pic_size"
+            android:layout_height="@dimen/sender_pic_size"
+            android:id="@+id/sender_image"
+            android:src="@drawable/temp"
+            android:layout_marginTop="5dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:elevation="2dp"
+            android:visibility="gone"
+            />
+
+    </RelativeLayout>
+
+</RelativeLayout>
